@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-default",
   "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "2.0.0",
+  "author": "danklut <dankluthotmail.ca>",
   "dependencies": {
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
@@ -18,12 +18,88 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    
+{
   "devDependencies": {
-    "prettier": "^1.12.0"
+    "@babel/core": "7.0.0-beta.51",
+    "@babel/node": "7.0.0-beta.51",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.51",
+    "@babel/plugin-proposal-optional-chaining": "7.0.0-beta.51",
+    "@babel/plugin-transform-runtime": "7.0.0-beta.51",
+    "@babel/preset-env": "7.0.0-beta.51",
+    "@babel/preset-flow": "7.0.0-beta.51",
+    "@babel/preset-react": "7.0.0-beta.51",
+    "@babel/runtime": "7.0.0-beta.51",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "8.2.1",
+    "babel-jest": "^22.4.3",
+    "chokidar": "^1.7.0",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flow-vars": "^0.5.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.42.0",
+    "glob": "^7.1.1",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "lerna": "^3.0.0-beta.21",
+    "npm-run-all": "4.1.2",
+    "plop": "^1.8.1",
+    "prettier": "^1.12",
+    "prettier-eslint-cli": "4.7.1",
+    "remotedev-server": "^0.2.3",
+    "rimraf": "^2.6.1",
+    "yargs": "^10.0.3"
+  },
+  "engines": {
+    "yarn": "^1.2.1",
+    "node": ">=6.11.5"
+  },
+  "eslintIgnore": [
+    "interfaces",
+    "**/__tests__/fixtures/"
+  ],
+  "private": true,
+  "scripts": {
+    "bootstrap": "npm-run-all -s check-versions lerna-prepare",
+    "check-versions": "babel-node scripts/check-versions.js",
+    "format": "npm-run-all -p format-packages format-cache-dir format-www format-examples format-scripts format-markdown",
+    "format-cache-dir": "prettier-eslint --write \"packages/gatsby/cache-dir/*.js\"",
+    "format-examples": "prettier-eslint --write \"examples/**/gatsby-node.js\" \"examples/**/gatsby-config.js\" \"examples/**/src/**/*.js\"",
+    "format-markdown": "prettier --write \"**/*.md\" --no-semi",
+    "format-packages": "prettier-eslint --write \"packages/*/src/**/*.js\"",
+    "format-scripts": "prettier-eslint --write \"scripts/**/*.js\"",
+    "format-www": "prettier-eslint --write \"www/*.js\" \"www/src/**/*.js\"",
+    "jest": "jest",
+    "lerna": "lerna",
+    "lerna-prepare": "lerna run prepare",
+    "lint": "eslint --ext .js,.jsx packages/**/src",
+    "lint:flow": "babel-node scripts/flow-check.js",
+    "plop": "plop",
+    "prebootstrap": "yarn",
+    "publish": "lerna publish",
+    "publish-canary": "lerna publish --canary --yes",
+    "publish-next": "lerna publish --npm-tag=next --cd-version=prerelease",
+    "remotedev": "remotedev --hostname=localhost --port=19999",
+    "test": "npm-run-all -s lint jest",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch",
+    "test_bkup": "npm-run-all -s lint test-node test-integration",
+    "watch": "lerna run watch --no-sort --stream --concurrency 999"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url" : "https://github.com/danklut/gatsby-starter-default"
   }
 }
