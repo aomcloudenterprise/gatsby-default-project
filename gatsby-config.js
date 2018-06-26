@@ -2,8 +2,6 @@ module.exports = {
   siteMetadata: {
     title: 'AOM Cloud Enterprise Blog',
   },
-  // In your gatsby-config.js
-module.exports = {
   plugins: [
     // You can have multiple instances of this plugin
     // to read source nodes from different locations on your
