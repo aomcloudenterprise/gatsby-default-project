@@ -26,7 +26,6 @@ module.exports = {
     },
   ],
   plugins: ['gatsby-plugin-react-helmet'],
-  {
     resolve: `gatsby-source-youtube`,
     options: {
       channelId: '<<UCoRYrVmWjNJ0WpbBFXMgtig >>',
