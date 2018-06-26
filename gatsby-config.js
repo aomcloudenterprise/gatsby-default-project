@@ -33,5 +33,4 @@ module.exports = {
       maxVideos: 50 // Defaults to 50
     },
   },  
-  ...
-
+ 
