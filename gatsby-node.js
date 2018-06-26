@@ -1,7 +1,14 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+plugins: [
+  {
+    resolve: `gatsby-source-youtube`,
+    options: {
+      channelId: '<<Youtube channelID eg. UCK8sQmJBp8GCxrOtXWBpyEA >>',
+      apiKey: '<< Add your Youtube api key here>>',
+      maxVideos: 50 // Defaults to 50
+    },
+  },
+  ...
+]
+ 
 
- // You can delete this file if you're not using it
+ 
