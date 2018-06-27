@@ -1,20 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'AOM Cloud Enterprise Blog',
+    title: `AOM Cloud Enterprise Blog`,
+    siteUrl: `https://www.aomcloudenterprise.com`,
+    description: `An affiliate online marketing platform thats teaches you the tips and tricks of online marketing and how to make money marketing other people's products.'`,
+    pathPrefix: '/gatsby-default-project',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
-    // You can have multiple instances of this plugin
-    // to read source nodes from different locations on your
-    // filesystem.
-    //
-    // The following sets up the Jekyll pattern of having a
-    // "pages" directory for Markdown files and a "data" directory
-    // for `.json`, `.yaml`, `.csv`.
+  plugins: [`gatsby-plugin-react-helmet`],
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `docs`,
+        path: `${__dirname}/../docs/`,
       },
     },
     {
