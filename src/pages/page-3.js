@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-const SecondPage = () => (
+const ThirdPage = () => (
   <Layout>
     <p>Page 3</p>
     <h2></h2>
@@ -10,4 +10,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default "/"
+export default ThirdPage
