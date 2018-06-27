@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'AOM Cloud Enterprise Blog',
   },
-  plugins: [
+  plugins: ['gatsby-plugin-react-helmet'],
     // You can have multiple instances of this plugin
     // to read source nodes from different locations on your
     // filesystem.
@@ -24,13 +24,11 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-  ],
-  plugins: ['gatsby-plugin-react-helmet'],
-    resolve: `gatsby-source-youtube`,
-    options: {
-      channelId: '<<UCoRYrVmWjNJ0WpbBFXMgtig >>',
-      apiKey: '<< AIzaSyDFHLjdkiDw239llTFdjSqd3lNexj_Gkhs>>',
-      maxVideos: 50 // Defaults to 50
+      resolve: `gatsby-source-youtube`,
+      options: {
+        channelId: '<<UCoRYrVmWjNJ0WpbBFXMgtig >>',
+        apiKey: '<< AIzaSyDFHLjdkiDw239llTFdjSqd3lNexj_Gkhs>>',
+        maxVideos: '50', // Defaults to 50
     },
   },  
-
+},
