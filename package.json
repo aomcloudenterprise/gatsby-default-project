@@ -92,9 +92,6 @@
     "test_bkup": "npm-run-all -s lint test-node test-integration",
     "watch": "lerna run watch --no-sort --stream --concurrency 999"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "repository": {
     "type" : "git",
     "url" : "https://github.com/danklut/gatsby-starter-default"
