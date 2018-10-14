@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `AOM Cloud Enterprise Blog`,
+    title: `AOM Cloud Enterprise`,
     siteUrl: `https://www.aomcloudenterprise.com`,
     description: `An affiliate online marketing platform thats teaches you the tips and tricks of online marketing and how to make money marketing other people's products.'`,
     pathPrefix: '/gatsby-default-project',
@@ -20,11 +20,17 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-      resolve: `gatsby-source-youtube`,
+      resolve: `gatsby-source-vimeo`,
       options: {
-        channelId: '<<UCoRYrVmWjNJ0WpbBFXMgtig >>',
-        apiKey: '<< AIzaSyDFHLjdkiDw239llTFdjSqd3lNexj_Gkhs>>',
-        maxVideos: '50', // Defaults to 50
+        clientID: 'INSERT_YOUR_CLIENT_IDENTIFIER',
+        clientSecret: 'INSERT_YOUR_CLIENT_SECRET',
+        userID: 'INSERT_VIMEO_USER_ID_TO_FETCH_VIDEOS',
+        searchQuery: 'INSERT_SEARCH_QUERY [OPTIONAL]',
+        transformer (video) {
+        // Transform the video data [OPTIONAL]
+        // i.e. Add extra fields or alter existing field
+        video.newField = 'value'
+        return video
     },
   },  
 },
